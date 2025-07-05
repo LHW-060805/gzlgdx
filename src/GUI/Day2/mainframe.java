@@ -32,12 +32,7 @@ public class mainframe extends JFrame {
         MENU.add(MI1);
         MENU.add(MI2);
         MENU.add(MI3);
-        MI1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent E) {
-                System.out.println("重开");
-            }
-        });
+        MI1.addActionListener(E -> System.out.println("重开"));
         MI2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
