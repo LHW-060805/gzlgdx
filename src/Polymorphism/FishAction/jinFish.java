@@ -1,4 +1,4 @@
-package MultipleProgram.ex3;
+package Polymorphism.FishAction;
 
 public class jinFish extends Fish implements Swim,Eat{
     public jinFish(){}

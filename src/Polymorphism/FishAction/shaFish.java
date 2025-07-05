@@ -1,4 +1,4 @@
-package MultipleProgram.ex3;
+package Polymorphism.FishAction;
 
 public class shaFish extends Fish implements Swim,Eat,electricity_Feel{
     public shaFish(){}

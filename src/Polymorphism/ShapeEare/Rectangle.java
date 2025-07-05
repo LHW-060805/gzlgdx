@@ -1,4 +1,4 @@
-package MultipleProgram.ex4;
+package Polymorphism.ShapeEare;
 
 public class Rectangle implements Shape{
     double height;

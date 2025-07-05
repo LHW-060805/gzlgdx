@@ -1,4 +1,4 @@
-package MultipleProgram.ex3;
+package Polymorphism.FishAction;
 
 public interface electricity_Feel {
     void E_feel();

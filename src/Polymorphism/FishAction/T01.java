@@ -1,4 +1,4 @@
-package MultipleProgram.ex3;
+package Polymorphism.FishAction;
 
 public class T01 {
     public static void main(String[] args) {

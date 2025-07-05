@@ -1,4 +1,4 @@
-package MultipleProgram.ex1;
+package Polymorphism.Dancing;
 
 public class Dancer implements Dance{
     @Override

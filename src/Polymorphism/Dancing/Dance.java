@@ -1,4 +1,4 @@
-package MultipleProgram.ex1;
+package Polymorphism.Dancing;
 
 public interface Dance {
     void dance();

@@ -1,4 +1,4 @@
-package MultipleProgram.ex4;
+package Polymorphism.ShapeEare;
 
 public class Square implements Shape{
     double side;

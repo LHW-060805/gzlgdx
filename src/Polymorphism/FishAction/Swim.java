@@ -1,4 +1,4 @@
-package MultipleProgram.ex3;
+package Polymorphism.FishAction;
 
 public interface Swim {
     void swim();

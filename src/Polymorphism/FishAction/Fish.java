@@ -1,4 +1,4 @@
-package MultipleProgram.ex3;
+package Polymorphism.FishAction;
 
 public abstract class Fish implements Swim,Eat{
     String type;
