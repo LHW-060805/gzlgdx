@@ -1,6 +1,5 @@
-package Myself_Study.ex1;
+package Polymorphism.ex1;
 
-import java.util.Scanner;
 public class Text {
     public static void main(String[] args) {
         Chinese chinese = new Chinese();

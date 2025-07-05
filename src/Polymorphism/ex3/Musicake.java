@@ -1,4 +1,4 @@
-package Myself_Study.ex3;
+package Polymorphism.ex3;
 
 public class Musicake extends Cake {
     @Override

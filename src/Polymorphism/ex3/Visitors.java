@@ -1,4 +1,4 @@
-package Myself_Study.ex3;
+package Polymorphism.ex3;
 import java.util.Scanner;
 public class Visitors {
     public static void main(String[] args) {

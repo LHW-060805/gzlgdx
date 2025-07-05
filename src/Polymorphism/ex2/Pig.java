@@ -1,4 +1,4 @@
-package Myself_Study.ex2;
+package Polymorphism.ex2;
 
 public class Pig extends Animal{
     @Override

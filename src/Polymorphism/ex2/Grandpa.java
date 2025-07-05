@@ -1,4 +1,4 @@
-package Myself_Study.ex2;
+package Polymorphism.ex2;
 
 public class Grandpa {
     public Animal cuiShape(String type){

@@ -1,4 +1,4 @@
-package Myself_Study.ex1;
+package Polymorphism.ex1;
 
 public class Korean extends Person {
     @Override

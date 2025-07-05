@@ -1,4 +1,4 @@
-package Myself_Study.ex2;
+package Polymorphism.ex2;
 
 public class To1 {
     public static void main(String[] args) {
