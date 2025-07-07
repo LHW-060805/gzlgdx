@@ -37,12 +37,12 @@ public class Product implements Comparable{
 
     //此方法用于执行如何判断当前类的大小排序
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(Object o) {        //用来判断对象之间的排序关系
         if (o == this) {
             return 0;
         }
         if (o instanceof Product) {     //老糊涂犯了，instanceof是比较类之间的相同！！！
-            Product p=(Product)(o);
+            Product p=(Product)(o);     //参数o的类型是Object，这意味着它可以是任何类型的对象
             int num= Double.compare(this.price,p.price);
             if (num !=0) {
                 return num;
