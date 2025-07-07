@@ -1,4 +1,4 @@
-package Study.set.ex1;
+package Study.setTest.ex1;
 
 import java.io.Serializable;
 //Serializable要序列化

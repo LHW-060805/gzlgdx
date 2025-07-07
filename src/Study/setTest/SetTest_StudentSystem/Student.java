@@ -1,4 +1,4 @@
-package Study.set.ex2;
+package Study.setTest.SetTest_StudentSystem;
 
 public class Student {
     private String name;

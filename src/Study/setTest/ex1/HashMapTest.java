@@ -1,11 +1,11 @@
-package Study.set.ex1;
+package Study.setTest.ex1;
 
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-public class T03 {
+public class HashMapTest {
     public static void main(String[] args) {
         Map map=new HashMap();
         map.put("CBC","中国建设银行");
@@ -21,7 +21,7 @@ public class T03 {
         if(map.containsKey("CBC")){
             System.out.println("存在");
         }else{
-        System.out.println("no");
+            System.out.println("no");
         }
         //迭代器的使用，用于遍历查询Map集合的元素
         Iterator iterator=set.iterator();

@@ -1,10 +1,10 @@
-package Study.set.ex1;
+package Study.setTest.ex1;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class T01 {
+public class ArrayListTest {
     public static void main(String[] args) {
         List list=new ArrayList();
         Book b1=new Book("欲言难止",45,"大大");

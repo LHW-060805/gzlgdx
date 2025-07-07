@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
-import Study.set.ex1.Book;
+import Study.setTest.ex1.Book;
 //序列化文件
 public class Test {
     public static void main(String[] args) {

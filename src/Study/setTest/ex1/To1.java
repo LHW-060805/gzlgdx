@@ -1,10 +1,10 @@
-package Study.set.ex1;
+package Study.setTest.ex1;
 import java.util.*;
 
 public class To1 {
     public static void main(String[] args) {
        // 泛型集合，在Java中泛型集合比较推荐，在实际操作中也推荐
-        List<Book> list=new ArrayList<Book>();
+        List<Book> list=new ArrayList<>();
         Book b1=new Book("你却爱着一个傻逼",98,"水千丞");
         list.add(b1);
         Book b2=new Book("娘娘腔",65,"水千丞");
