@@ -11,8 +11,8 @@ public class HashMapTest {
         map.put("CBC","中国建设银行");
         map.put("ABC","中国农业银行");
         //String value=(String)map.get("CBC");
-        System.out.println(map.get("CBC"));
-        System.out.println(map.get("ABC"));
+//        System.out.println(map.get("CBC"));
+//        System.out.println(map.get("ABC"));
         Set set=map.keySet();
         System.out.println(map.keySet());
         System.out.println(map.values());
@@ -23,12 +23,20 @@ public class HashMapTest {
         }else{
             System.out.println("no");
         }
+
         //迭代器的使用，用于遍历查询Map集合的元素
-        Iterator iterator=set.iterator();
+//        Iterator iterator=set.iterator();
+//        while(iterator.hasNext()){
+//            String key=(String)iterator.next();
+//            String values=(String)map.get(key);
+//            System.out.println(key+"===="+values);
+//        }
+
+        Set entrySet = map.entrySet();
+        Iterator iterator = entrySet.iterator();
         while(iterator.hasNext()){
-            String key=(String)iterator.next();
-            String values=(String)map.get(key);
-            System.out.println(key+"===="+values);
+            Map.Entry next =(Map.Entry) iterator.next();
+            System.out.println(next.getKey()+"+++++"+next.getValue());
         }
     }
 }
