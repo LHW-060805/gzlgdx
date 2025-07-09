@@ -26,6 +26,9 @@ public class ComparetorTest {
         Comparator comparator2=new Comparator() {
             @Override
             public int compare(Object o1, Object o2) {
+                if (o1 == o2) {
+                    return 0;
+                }
                 if (o1 instanceof Product && o2 instanceof Product) {
                     Product p1=(Product)o1;
                     Product p2=(Product)o2;
@@ -36,7 +39,7 @@ public class ComparetorTest {
         };
         Product[] arr=
                 {
-                new Product("Phane10Promax",6999),
+                        new Product("Phane10Promax",6999),
                         new Product("vivo12",4999),
                         new Product("idea19",9990),
                         new Product("figssho",3999),
