@@ -26,7 +26,7 @@ public class FavouriteWriter {
             System.out.print(items+"\t\t");
         }
 
-        List<String> currentBooks=map.get(name);
+        List<String> currentBooks=map.get(name);    //获得value值
         System.out.println("请选择最喜欢的书");
         String inputBooks= input.next();
 
@@ -45,6 +45,7 @@ public class FavouriteWriter {
             }
         }
     }
+
     public static void main(String[] args) {
 
         List<String> list1 = new ArrayList<>();
