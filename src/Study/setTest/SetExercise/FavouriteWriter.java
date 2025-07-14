@@ -70,7 +70,7 @@ public class FavouriteWriter {
         var iterator=entrySet.iterator();
         System.out.println("作家名如下：");
         while(iterator.hasNext()){
-            Map.Entry<String, List> next = iterator.next();
+            var next = iterator.next();
             System.out.print(next.getKey()+"\t\t");
         }
         System.out.println("\n");
