@@ -5,7 +5,7 @@ import java.io.*;
 //缓冲流的读写
 public class Slowdowm_Read {
     public static void main(String[] args) {
-        Reader reader=null;
+        FileReader reader=null;
         BufferedReader br=null;
         try {
             reader=new FileReader("D:\\Java_study\\Day_1\\Text_1.txt");

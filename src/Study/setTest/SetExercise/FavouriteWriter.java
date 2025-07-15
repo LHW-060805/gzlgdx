@@ -21,7 +21,7 @@ public class FavouriteWriter {
             }
         }
 
-        List books = map.get(name);
+        map.get(name)
         for(Object items:books){
             System.out.print(items+"\t\t");
         }
