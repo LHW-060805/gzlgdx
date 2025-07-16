@@ -6,6 +6,7 @@ public class Book implements Serializable {
     private String name;
     private int price;
     private String author;
+    private static long serialVersionUID=535653426236L;
     public String getName() {
         return name;
     }
