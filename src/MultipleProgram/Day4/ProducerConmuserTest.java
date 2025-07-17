@@ -17,6 +17,7 @@ public class ProducerConmuserTest {
         }
     }
 }
+/*========================================================================================*/
 class Clerk{
     private int produceNumber=0;
 
@@ -55,7 +56,7 @@ class Clerk{
         notifyAll();
     }
 }
-
+/*========================================================================================*/
 class Producer extends Thread{
     public Clerk clerk;
     public Producer(Clerk clerk,String name){
@@ -77,7 +78,7 @@ class Producer extends Thread{
         }
     }
 }
-
+/*========================================================================================*/
 class Consumer extends Thread{
     public Clerk clerk;
     public Consumer(Clerk clerk,String name){
@@ -99,3 +100,87 @@ class Consumer extends Thread{
         }
     }
 }
+/*
+/以下是改进版本
+class SharedResource {
+    private int data;
+    private boolean available = false;
+
+    // 生产者放入数据
+    public synchronized void produce(int value) throws InterruptedException {
+        // 当数据还未被消费时，生产者等待
+        while (available) {
+            wait();
+        }
+        data = value;
+        available = true;
+        System.out.println("生产者生产: " + data);
+        // 通知消费者数据已准备好
+        notifyAll();
+    }
+
+    // 消费者获取数据
+    public synchronized int consume() throws InterruptedException {
+        // 当数据不可用时，消费者等待
+        while (!available) {
+            wait();
+        }
+        available = false;
+        System.out.println("消费者消费: " + data);
+        // 通知生产者数据已被消费
+        notifyAll();
+        return data;
+    }
+}
+
+class Producer implements Runnable {
+    private SharedResource resource;
+
+    public Producer(SharedResource resource) {
+        this.resource = resource;
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            try {
+                resource.produce(i);
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+    }
+}
+
+class Consumer implements Runnable {
+    private SharedResource resource;
+
+    public Consumer(SharedResource resource) {
+        this.resource = resource;
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            try {
+                resource.consume();
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+    }
+}
+
+public class WaitNotifyExample {
+    public static void main(String[] args) {
+        SharedResource resource = new SharedResource();
+        Thread producerThread = new Thread(new Producer(resource));
+        Thread consumerThread = new Thread(new Consumer(resource));
+
+        producerThread.start();
+        consumerThread.start();
+    }
+}
+ */

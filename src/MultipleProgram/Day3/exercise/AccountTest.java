@@ -9,12 +9,11 @@ public class AccountTest {
         visitor2.start();
     }
 }
+
 class Account{
     private double balance;
     public synchronized void add(double acc){
-        if (acc >0) {
-            balance+=acc;
-        }
+        if (acc >0) balance += acc;
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -23,6 +22,7 @@ class Account{
         System.out.println(Thread.currentThread().getName()+"存钱1000,余额为："+balance);
     }
 }
+
 class Customer extends Thread{
     Account account;
     public Customer(){}

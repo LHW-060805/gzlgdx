@@ -2,6 +2,15 @@ package MultipleProgram.Day2;
 
 public class mySystem implements Runnable{
     private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public mySystem(){
 
     }
@@ -36,6 +45,6 @@ public class mySystem implements Runnable{
 
     @Override
     public void run() {
-        System.out.println(name+"运行中");
+        System.out.println(Thread.currentThread().getName()+"运行中");
     }
 }

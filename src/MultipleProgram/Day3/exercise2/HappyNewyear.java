@@ -1,4 +1,4 @@
-package MultipleProgram.Day3;
+package MultipleProgram.Day3.exercise2;
 
 public class HappyNewyear {
     public static void main(String[] args) {
