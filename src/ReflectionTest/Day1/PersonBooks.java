@@ -41,8 +41,8 @@ public class PersonBooks {
     public void show(){
         System.out.println("public");
     }
-    private void showbook(){
-        System.out.println("private");
+    private String showBook(String book,String top,String bottom){
+        return book+":"+top+"-"+bottom;
     }
 
     @Override

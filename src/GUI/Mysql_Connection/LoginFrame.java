@@ -25,6 +25,7 @@ public class LoginFrame extends Frame {
         int y = (int) ((screenSize.height - height) / 2);
         this.setBounds(x, y, width + 17, height + 38);    // 设置大小
         this.setTitle("登录界面"); // 设置程序名字
+        this.setResizable(false);
         initPane(); // 初始化登录面板
     }
 
@@ -204,8 +205,7 @@ public class LoginFrame extends Frame {
             }
         });
 
-//        this.getContentPane().add(fieldPanel, BorderLayout.CENTER);
-
+        this.add(fieldPanel, BorderLayout.CENTER);
     }
 }
 class Login_Main{
