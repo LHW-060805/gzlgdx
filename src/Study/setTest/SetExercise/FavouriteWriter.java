@@ -12,13 +12,12 @@ public class FavouriteWriter {
         boolean isValues=false;
         String name=inputWriters;
         while(!isValues){
-            if (map.containsKey(inputWriters)) {
-                System.out.println("查询成功");
-                isValues=true;
-            }else {
+            if (!(map.containsKey(inputWriters))) {
                 System.out.println("无该作家");
                 name=input.next();
             }
+            System.out.println("查询成功");
+            isValues=true;
         }
 
         List books = map.get(name);
@@ -26,16 +25,16 @@ public class FavouriteWriter {
             System.out.print(items+"\t\t");
         }
 
-        List<String> currentBooks=map.get(name);    //获得value值
-        System.out.println("请选择最喜欢的书");
+            //获得value值
+        System.out.println("\n请选择最喜欢的书");
         String inputBooks= input.next();
 
         while(true) {
-            if (currentBooks.contains(inputBooks)) {
+            if (books.contains(inputBooks)) {
                  System.out.println("有该书");
                 System.out.println
                         (
-                                "你最喜欢的作家为："+inputWriters+",最喜欢的书为："+inputBooks
+                                "你最喜欢的作家为："+name+",最喜欢的书为："+inputBooks
                         );
                 break;
             }else{

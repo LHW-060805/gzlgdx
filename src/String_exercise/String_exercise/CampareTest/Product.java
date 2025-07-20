@@ -2,7 +2,7 @@ package String_exercise.String_exercise.CampareTest;
 
 import java.util.Objects;
 
-public class Product implements Comparable{
+public class Product implements Comparable<Object>{
     private String name;
     private double price;
 

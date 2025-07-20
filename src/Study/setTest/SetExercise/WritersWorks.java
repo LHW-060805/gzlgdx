@@ -6,7 +6,7 @@ public class WritersWorks {
     public static final String writer1="麦香鸡呢";
     public static final String writer2="水千丞";
     public static void main(String[] args) {
-        Map<String,List> map=new HashMap<>();
+        Map<String,List<String>> map=new HashMap<>();
         List<String> list1=new ArrayList<>();
         list1.add("欲言又止");
         list1.add("囚于永夜");
@@ -23,10 +23,10 @@ public class WritersWorks {
         list2.add("谁把谁当真");
         map.put(writer2,list2);
 
-        Set<Map.Entry<String, List>> entrySet = map.entrySet();
-        Iterator<Map.Entry<String, List>> iterator = entrySet.iterator();
+        var entrySet = map.entrySet();
+        var iterator = entrySet.iterator();
         while(iterator.hasNext()){
-            Map.Entry<String, List> next = iterator.next();
+            var next = iterator.next();
             System.out.println("作家："+next.getKey());
             System.out.println("书名："+next.getValue());
         }
