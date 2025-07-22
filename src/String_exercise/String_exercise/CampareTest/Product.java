@@ -1,5 +1,7 @@
 package String_exercise.String_exercise.CampareTest;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Product implements Comparable<Object>{
@@ -65,5 +67,15 @@ public class Product implements Comparable<Object>{
             //因为是字符串，本身已经重写compareTo方法
         }
         throw new RuntimeException("类型不匹配");
+    }
+
+    public static List<Product> DateSave(){
+        List<Product> arrayList = new ArrayList<>();
+        arrayList.add(new Product("hfosah",9000));
+        arrayList.add(new Product("oasug",8888));
+        arrayList.add(new Product("hsofa",10000));
+        arrayList.add(new Product("hsofa",10000));
+        arrayList.add(new Product("aawia",7788));
+        return arrayList;
     }
 }

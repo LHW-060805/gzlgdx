@@ -31,7 +31,7 @@ public class Student {
                 '}';
     }
     public Student(){
-
+        System.out.println("My name is ZhaoShengGe");
     }
     public Student(String name,int age,String sex){
         this.name=name;
