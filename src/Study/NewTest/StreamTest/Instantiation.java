@@ -1,4 +1,4 @@
-package Study.StreamTest;
+package Study.NewTest.StreamTest;
 
 import String_exercise.String_exercise.CampareTest.Product;
 

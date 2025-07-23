@@ -24,11 +24,18 @@ public class WritersWorks {
         map.put(writer2,list2);
 
         var entrySet = map.entrySet();
+        for (var next : entrySet) {
+            System.out.println("作家：" + next.getKey());
+            System.out.println("书名：" + next.getValue());
+        }
+        /*
+        var entrySet = map.entrySet();
         var iterator = entrySet.iterator();
         while(iterator.hasNext()){
             var next = iterator.next();
             System.out.println("作家："+next.getKey());
             System.out.println("书名："+next.getValue());
         }
+         */
     }
 }
