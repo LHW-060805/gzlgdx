@@ -1,8 +1,6 @@
 package Study.LambdaTest;
 
 import Study.setTest.SetTest_StudentSystem.Student;
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Comparator;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -23,6 +21,9 @@ public class test1 {
             System.out.println("Lambda表达式的test");
         };
         r2.run();
+
+//        Runnable r3=System.out::println;
+//        r3.run();
 
         Comparator<Integer> comparator1=new Comparator<Integer>() {
             @Override

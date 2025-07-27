@@ -22,6 +22,8 @@ public class Instantiation {
 
         //attention!!这里的filter和forEach都是接口，可以用lambda表达式,涉及到stream的方法都是接口
         //filter适用于过滤数据流，forEach是用来结束流，要是没有结束流，中间操作就不会执行
+
+        //这些都是中间操作
         productList.stream().filter(product -> product.getPrice() >= 9090).forEach(System.out::println);
         System.out.println("===================================================");
         productList.stream().limit(4).forEach(System.out::println);
@@ -52,7 +54,11 @@ public class Instantiation {
         System.out.println(Arrays.stream(arr1).reduce(0, Integer::max));
 //        System.out.println(Arrays.stream(arr1).max(Integer::compare).get());
         System.out.println(productList.stream().max(Product::compareTo));
-        long count = productList.stream().count();
+        long count = productList.size();
         System.out.println(count);
+        /*
+        collect(Collectors.toList())
+        生成新对象，不改变原本数据
+         */
     }
 }
