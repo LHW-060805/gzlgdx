@@ -1,4 +1,4 @@
-package String_exercise.String_exercise;
+package String_exercise.DateTest;
 
 public class Date {
     public static void main(String[] args) {

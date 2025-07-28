@@ -1,7 +1,7 @@
 package Study.setTest.SetTest_StudentSystem;
+
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class Student_System {
     List<Student> list = new ArrayList<>();
@@ -15,11 +15,6 @@ public class Student_System {
         }
     }
 
-//      public void searchStudent(){
-//        for (Student ST:list) {
-//            System.out.println(ST);
-//        }
-//    }
     public void searchStudent(String name) {
         boolean found = false;
         for (Student student : list) {

@@ -1,5 +1,5 @@
 package Polymorphism.AnimalShape;
-
-public abstract class Animal {
-    public abstract void getShape();
+@FunctionalInterface
+public interface Animal {
+    void getShape();
 }

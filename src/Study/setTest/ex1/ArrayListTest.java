@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ArrayListTest {
     public static void main(String[] args) {
-        List list=new ArrayList();
+        List<Book> list=new ArrayList<>();
         Book b1=new Book("欲言难止",45,"大大");
         Book b2=new Book("一屋暗灯",78,"大大");
         list.add(b1);

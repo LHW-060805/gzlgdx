@@ -1,4 +1,4 @@
-package String_exercise.String_exercise;
+package String_exercise.StringWay;
 
 import java.util.Scanner;
 

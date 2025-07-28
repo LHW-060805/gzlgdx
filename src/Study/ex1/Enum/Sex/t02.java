@@ -1,11 +1,12 @@
 package Study.ex1.Enum.Sex;
 
-import Study.setTest.SetTest_StudentSystem.Student;
+import java.util.Scanner;
 
 public class t02 {
     public static void main(String[] args) {
-        Student st=new Student();
-        Gender gender=Gender.男;
+        Scanner input=new Scanner(System.in);
+        String sex=input.next();
+        Gender gender=Gender.valueOf(sex);
         System.out.println(gender);
     }
 }

@@ -39,6 +39,19 @@ public class tickit implements Runnable{
 //            } catch (InterruptedException e) {
 //                throw new RuntimeException(e);
 //            }
+//      public synchronized void show(){
+//        if (ticket > 0) {
+//            try {
+//                Thread.sleep(10);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            System.out.println(Thread.currentThread().getName() + "售票，票数为：" + ticket);
+//            ticket--;
+//        }else{
+//            isflat=false;
+//        }
+//    }
 
             try {
                 Thread.sleep(10);
@@ -61,20 +74,6 @@ public class tickit implements Runnable{
         }
     }
 
-    //同步方法
-    public synchronized void show(){
-        if (ticket > 0) {
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println(Thread.currentThread().getName() + "售票，票数为：" + ticket);
-            ticket--;
-        }else{
-            isflat=false;
-        }
-    }
 }
 class test{
     public static void main(String[] args) {

@@ -1,5 +1,6 @@
 package IOExercise.Exercise;
 import java.io.*;
+import java.io.File;
 import java.util.Scanner;
 
 /*
@@ -8,73 +9,48 @@ import java.util.Scanner;
 （3）登录验证：通过控制台接收登录信息，使用BufferedReader逐行读取文件数据，验证输入的账户名和密码是否与文件中某一行完全匹配，
 匹配成功提示 “登录成功”，否则提示 “账号密码错误”。
  */
-public class IOExercise {
-    public static final String string = "D:\\Java_study\\Day_1\\user.txt";
-
+public class IdentityIOExercise {
+    public static final String string = "D:\\Java_study\\Day_1\\Text_1.txt";
+    public static Scanner input = new Scanner(System.in);
     public static void register() {
-        Writer writer = null;
-        BufferedWriter br = null;
-        Scanner input = new Scanner(System.in);
-        try {
-            writer = new FileWriter(string);
-            br = new BufferedWriter(writer);
-            System.out.println("账户名：");
+        try(FileWriter writer=new FileWriter(string);
+            BufferedWriter bufferedWriter=new BufferedWriter(writer)){
+            System.out.println("注册账户名：");
             String words1 = input.next();
-            System.out.println("密码:");
+            System.out.println("注册密码:");
             String words2 = input.next();
-            br.write(words1 + "，" + words2 + "\n");
+            bufferedWriter.write(words1+","+words2);
             System.out.println("写入成功");
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
-        } finally {
-            try {
-                br.close();
-                writer.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
         }
     }
 
     public static void identity() {
-        Reader reader = null;
-        BufferedReader fis = null;
-        try {
-            reader = new FileReader(string);
-            fis = new BufferedReader(reader);
-            String words = fis.readLine();
+        try (FileReader reader=new FileReader(string);
+            BufferedReader bufferedReader=new BufferedReader(reader)){
+            String words = bufferedReader.readLine();
             while ((words) != null) {
                 System.out.println(words);
-                words = fis.readLine();
+                words = bufferedReader.readLine();
             }
             System.out.println("读取成功");
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
-        } finally {
-            try {
-                reader.close();
-                fis.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
         }
     }
 
-    public static void loginSystem() throws IOException {
-        Reader reader = null;
-        BufferedReader fos = null;
+    public static void loginSystem() {
         Scanner input = new Scanner(System.in);
         System.out.print("登录账户名：");
         String loginUsername = input.nextLine();
         System.out.print("登录密码：");
         String loginPassword = input.nextLine();
 
-        try {
-            reader = new FileReader(string);
-            fos = new BufferedReader(reader);
-            String line = fos.readLine();
+        try (FileReader reader=new FileReader(string);
+             BufferedReader bufferedReader=new BufferedReader(reader)){
+            String line = bufferedReader.readLine();
             boolean loginSuccess = false;
-
             while ((line) != null) {
                 String[] parts = line.split("，");
                 //确保拆分后恰好有用户名和密码两部分
@@ -84,6 +60,7 @@ public class IOExercise {
                     loginSuccess = true;
                     break;
                 }
+                line = bufferedReader.readLine();
             }
 
             if (loginSuccess) {
@@ -91,22 +68,18 @@ public class IOExercise {
             } else {
                 System.out.println("账号密码错误");
             }
-
         } catch (IOException ex) {
             System.out.println("登录验证失败: " + ex.getMessage());
-        } finally {
-            fos.close();
-
         }
     }
 
     public static void main(String[] args) throws IOException {
-//        File file = new File();
-//        if (file.exists()) {
-//            System.out.println("文件存在");
-//        } else {
-//            System.out.println("新建了一个文件");
-//        }
+        File file=new File("D:\\Java_study\\Day_1\\Text_1.txt");
+        if (file.exists()) {
+            System.out.println("文件存在");
+        } else {
+            System.out.println("新建了一个文件");
+        }
         register();
         identity();
         loginSystem();

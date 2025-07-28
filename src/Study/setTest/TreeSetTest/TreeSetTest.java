@@ -1,11 +1,12 @@
 package Study.setTest.TreeSetTest;
 
 import java.util.Iterator;
+import java.util.Set;
 import java.util.TreeSet;
 
 public class TreeSetTest {
     public static void main(String[] args) {
-        TreeSet treeSet = new TreeSet();
+        Set<User> treeSet = new TreeSet<>();
 //        treeSet.add("AA");
 //        treeSet.add("WW");
 //        treeSet.add("AA");
@@ -23,7 +24,7 @@ public class TreeSetTest {
         treeSet.add(user4);
         treeSet.add(user5);
         //结果表明，TreeSet集合中，equals方法和HashCode方法在这不用，不必重写，比较大小看的是所在类的Compara方法和CompareTo
-        Iterator iterator = treeSet.iterator();
+        Iterator<User> iterator = treeSet.iterator();
         while(iterator.hasNext()){
             System.out.println(iterator.next());
         }

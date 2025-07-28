@@ -1,4 +1,4 @@
-package String_exercise.String_exercise.CampareTest;
+package String_exercise.Compare_exercise.CampareTest;
 
 import java.util.Arrays;
 

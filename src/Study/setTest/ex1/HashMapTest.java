@@ -7,13 +7,12 @@ import java.util.Set;
 
 public class HashMapTest {
     public static void main(String[] args) {
-        Map map=new HashMap();
+        Map<String,String> map=new HashMap<>();
         map.put("CBC","中国建设银行");
         map.put("ABC","中国农业银行");
         //String value=(String)map.get("CBC");
 //        System.out.println(map.get("CBC"));
 //        System.out.println(map.get("ABC"));
-        Set set=map.keySet();
         System.out.println(map.keySet());
         System.out.println(map.values());
         System.out.println(map);
@@ -31,12 +30,13 @@ public class HashMapTest {
 //            String values=(String)map.get(key);
 //            System.out.println(key+"===="+values);
 //        }
-
-        Set entrySet = map.entrySet();
-        Iterator iterator = entrySet.iterator();
-        while(iterator.hasNext()){
-            Map.Entry next =(Map.Entry) iterator.next();
-            System.out.println(next.getKey()+"+++++"+next.getValue());
-        }
+//
+//        Set entrySet = map.entrySet();
+//        Iterator iterator = entrySet.iterator();
+//        while(iterator.hasNext()){
+//            Map.Entry next =(Map.Entry) iterator.next();
+//            System.out.println(next.getKey()+"+++++"+next.getValue());
+//        }
+        map.entrySet().forEach(System.out::println);
     }
 }

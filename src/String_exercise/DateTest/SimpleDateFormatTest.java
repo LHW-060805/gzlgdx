@@ -1,10 +1,9 @@
-package String_exercise;
+package String_exercise.DateTest;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Random;
 
-public class Integrate {
+public class SimpleDateFormatTest {
     public static void main(String[] args) {
 //        StringBuffer sb=new StringBuffer();
 //        sb.append("许则");

@@ -1,6 +1,6 @@
 package Study.NewTest.StreamTest;
 
-import String_exercise.String_exercise.CampareTest.Product;
+import String_exercise.Compare_exercise.CampareTest.Product;
 
 import java.util.Arrays;
 import java.util.List;
